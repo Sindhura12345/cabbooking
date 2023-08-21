@@ -1,0 +1,70 @@
+
+
+<script src="/carbookings/js/jquery-2.1.1.js"></script>
+<script src="/carbookings/js/jquery-3.2.1.js"></script>
+<!-- JQuery -->
+<script src="/carbookings/scripts/others/jquery-2.1.1.js"></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript" src="/carbookings/scripts/custom/angular.js"></script>
+<script type="text/javascript"	src="/carbookings/scripts/custom/applicationregister.js"></script>
+<script type="text/javascript"	src="/carbookings/scripts/custom/navigate.js"></script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">  
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">  
+<link href="css/magnific-popup.css" rel="stylesheet">  
+<link href="css/gallery-1.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+
+
+
+
+
+<section id="about">
+        <div id="accounts" class="container-fluid tab-pane " style="background-image:url('/P001/images/b.jpg')">
+			<table class="table table-bordered" style="text-align:center;">
+				<tr style='background-color: ghostwhite'>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Mobile number</th> 
+					<th>pickup location</th>
+					<th>destination</th>  
+					<th>pickup date</th>
+					<th>pickup time</th>
+					
+				</tr>
+				<tr data-ng-repeat="userdata in userdetails">
+					<td>{{userdata.myname}}</td>
+					<td>{{userdata.email}}</td>
+					<td>{{userdata.phoneno}}</td>
+					<td>{{userdata.ploc}}</td>
+					<td>{{userdata.dloc}}</td>
+					<td>{{userdata.pdate}}</td>
+					<td>{{userdata.ptime}}</td>
+					
+				</tr>
+			</table>
+		</div>
+    </section><!--/#about-->
+    
+    
+     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+   
+ 
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->

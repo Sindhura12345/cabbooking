@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ApplicationRegister">
+
+<insert id="InsertData" parameterType="map">
+
+insert into public.register( firstname,lastname,email,password,gender,dob,type) values(#{T.firstname},#{T.lastname},#{T.email},#{T.password},#{T.gender},#{T.dob},#{T.type});
+
+</insert>
+
+<select id="viewaccounts" resultType="Register">
+		SELECT firstname,lastname,email,password,gender,dob,type from public.register;
+</select> 
+
+<select id="getDetails" resultType="Register">
+		SELECT firstname,lastname,email,password,gender,dob,type from public.register where email=#{T.email};
+</select>
+
+<update id="updateDetails"  parameterType="map">
+		update public.register SET username=#{T.username},dob=#{T.dob},gender=#{T.gender},aadhar=#{T.aadhaar},mobileno=#{T.mobileno},email=#{T.email},password=#{T.password} WHERE aadhar=#{T.aadhar};
+</update>
+
+<delete id="removeDetails" parameterType="java.lang.String">
+		delete from public.register where aadhar=#{aadhar};
+</delete>
+
+<select id="CheckRegistertaion" parameterType="map"
+		resultType="java.lang.Integer">
+		select count(*) from public.register WHERE 
+		username=#{p.username} AND password=#{p.password};    
+	</select>
+
+	<select id="getUserDetails" parameterType="map"
+		resultType="Register">
+		select username,password from public.register where
+		username=#{username};
+	</select>
+
+</mapper>
